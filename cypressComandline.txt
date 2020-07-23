@@ -1,0 +1,2 @@
+save video
+npx cypress run --spec "cypress/integration/QA-FE/test-search.js"

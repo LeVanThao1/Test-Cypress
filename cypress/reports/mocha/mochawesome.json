@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-22T10:22:30.032Z",
+    "end": "2020-07-22T10:22:45.722Z",
+    "duration": 15690,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "de433db1-6f46-4e03-85ab-b4e7cf468cec",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/tamp.js",
+      "file": "cypress/integration/QA-FE/tamp.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1b1f5da-cf20-4381-b4c8-927d46f42a6a",
+          "title": "Cart Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check the cart when have not login",
+              "fullTitle": "Cart Test Check the cart when have not login",
+              "timedOut": null,
+              "duration": 6135,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://your-lap.herokuapp.com\", {\n  timeout: 30000\n}); // cy.get('.home-page').should(\"be.visible\")\n// cy.get('.cart-drawer-container').click()\n// cy.wait(3000)\n// cy.url().should('includes', '/login')",
+              "err": {},
+              "uuid": "ebfa9810-ae97-4b84-9f27-eaad0105b918",
+              "parentUUID": "e1b1f5da-cf20-4381-b4c8-927d46f42a6a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebfa9810-ae97-4b84-9f27-eaad0105b918"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6135,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

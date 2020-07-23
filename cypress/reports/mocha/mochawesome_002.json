@@ -1,0 +1,169 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-22T10:23:46.828Z",
+    "end": "2020-07-22T10:24:26.314Z",
+    "duration": 39486,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8a0e70e4-9a5f-4a65-8d4e-9fd03f7014ba",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/test-login.js",
+      "file": "cypress/integration/QA-FE/test-login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+          "title": "Login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Don't type data",
+              "fullTitle": "Login test Don't type data",
+              "timedOut": null,
+              "duration": 3105,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.CCz-NV').should('be.disabled');",
+              "err": {},
+              "uuid": "4e6d2a16-eece-47dd-a650-f63eaa179f1e",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Type email and don't type password",
+              "fullTitle": "Login test Type email and don't type password",
+              "timedOut": null,
+              "duration": 1361,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('._1HkukX > .FcG1bN > ._56AraZ').type('{selectall}').type('{del}').type(email);\ncy.get('.CCz-NV').should('be.disabled');",
+              "err": {},
+              "uuid": "67c93d19-8131-4b14-b101-041d4a684b4c",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Account entry does not exist",
+              "fullTitle": "Login test Account entry does not exist",
+              "timedOut": null,
+              "duration": 2144,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.typeData(emailFail, password);\ncy.get('.uud8ko').should('be.visible');\ncy.get('.uud8ko').contains('Đăng nhập KHÔNG thành công. Bạn vui lòng thử lại hoặc đăng nhập bằng cách khác nhé!');",
+              "err": {},
+              "uuid": "bfb3af39-9bb8-41d1-9670-9d00b12654b5",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login success",
+              "fullTitle": "Login test Login success",
+              "timedOut": null,
+              "duration": 32726,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.typeData(email, password);\ncy.get('.CCz-NV').click();\ncy.wait(30000);\ncy.get('._25c6dS').click();\ncy.url().should('eq', 'https://shopee.vn/');\ncy.get('.shopee-popup__close-btn').click();\ncy.get('.navbar__username').contains('levanthao_2104');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://shopee.vn/__cypress/runner/cypress_runner.js:150743:17)\n    at Context.click (https://shopee.vn/__cypress/runner/cypress_runner.js:150887:14)\n    at Context.<anonymous> (https://shopee.vn/__cypress/runner/cypress_runner.js:167622:21)\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/integration/QA-FE/test-login.js:27:24)",
+                "diff": null
+              },
+              "uuid": "71effc69-234c-4aaa-8c62-58abbcf98221",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e6d2a16-eece-47dd-a650-f63eaa179f1e",
+            "67c93d19-8131-4b14-b101-041d4a684b4c",
+            "bfb3af39-9bb8-41d1-9670-9d00b12654b5"
+          ],
+          "failures": [
+            "71effc69-234c-4aaa-8c62-58abbcf98221"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39336,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

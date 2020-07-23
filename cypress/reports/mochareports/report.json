@@ -1,0 +1,405 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 10,
+    "passes": 6,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-07-22T10:25:18.971Z",
+    "end": "2020-07-22T10:25:18.971Z",
+    "duration": 105546,
+    "testsRegistered": 10,
+    "passPercent": 60,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "de433db1-6f46-4e03-85ab-b4e7cf468cec",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/tamp.js",
+      "file": "cypress/integration/QA-FE/tamp.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1b1f5da-cf20-4381-b4c8-927d46f42a6a",
+          "title": "Cart Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check the cart when have not login",
+              "fullTitle": "Cart Test Check the cart when have not login",
+              "timedOut": null,
+              "duration": 6135,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://your-lap.herokuapp.com\", {\n  timeout: 30000\n}); // cy.get('.home-page').should(\"be.visible\")\n// cy.get('.cart-drawer-container').click()\n// cy.wait(3000)\n// cy.url().should('includes', '/login')",
+              "err": {},
+              "uuid": "ebfa9810-ae97-4b84-9f27-eaad0105b918",
+              "parentUUID": "e1b1f5da-cf20-4381-b4c8-927d46f42a6a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebfa9810-ae97-4b84-9f27-eaad0105b918"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6135,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ff3e6b3e-9614-4e6c-8e24-ca16c7b473ec",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/test-cart.js",
+      "file": "cypress/integration/QA-FE/test-cart.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9f3b812-320d-495b-9a86-ff6cea63a34e",
+          "title": "Cart Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check the cart when have not login",
+              "fullTitle": "Cart Test Check the cart when have not login",
+              "timedOut": null,
+              "duration": 35213,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\", {\n  timeout: 30000\n});\ncy.get('.home-page').should(\"be.visible\");\ncy.get('.cart-drawer-container').click();\ncy.wait(3000);\ncy.url().should('includes', '/login');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Cart Test`",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Cart Test`\n    at mouseAction (https://shopee.vn/__cypress/runner/cypress_runner.js:150743:17)\n    at Context.click (https://shopee.vn/__cypress/runner/cypress_runner.js:150887:14)\n    at Context.<anonymous> (https://shopee.vn/__cypress/runner/cypress_runner.js:167622:21)\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/support/index.js:567:22)",
+                "diff": null
+              },
+              "uuid": "79de839e-7e7e-4ac2-b6ff-2da33bf9f224",
+              "parentUUID": "f9f3b812-320d-495b-9a86-ff6cea63a34e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check the cart when you have not added the product",
+              "fullTitle": "Cart Test Check the cart when you have not added the product",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.shopee-cart-number-badge').should('be.hidden');\ncy.get('.cart-drawer-container').click();\ncy.wait(3000);\ncy.url().should('includes', '/cart');\ncy.get('._24MWI7 _1IilcX').contains('Giỏ hàng của bạn còn trống');",
+              "err": {},
+              "uuid": "11de44a9-743e-429a-a86b-6d5f7d73e1b9",
+              "parentUUID": "f9f3b812-320d-495b-9a86-ff6cea63a34e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Check add product",
+              "fullTitle": "Cart Test Check add product",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.shopee-searchbar-input__input').type('{selectall}').type('{del}').type(search);\ncy.get('.btn').click();\ncy.wait(3000);\ncy.url().should('eq', \"https://shopee.vn/search?keyword=\".concat(search));\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get('.shopee-search-result-header__text').contains('Kết quả tìm kiếm cho từ khoá \\'samsung thiết bị điện tử tivi\\'');\ncy.get('.row > .shopee-search-item-result__item').its('length').should('be.gt', 0);\ncy.get('.row > :nth-child(1)').contains('Samsung');",
+              "err": {},
+              "uuid": "8f05707c-5f23-4328-a58f-4293cbb90fdb",
+              "parentUUID": "f9f3b812-320d-495b-9a86-ff6cea63a34e",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "79de839e-7e7e-4ac2-b6ff-2da33bf9f224"
+          ],
+          "pending": [],
+          "skipped": [
+            "11de44a9-743e-429a-a86b-6d5f7d73e1b9",
+            "8f05707c-5f23-4328-a58f-4293cbb90fdb"
+          ],
+          "duration": 35213,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8a0e70e4-9a5f-4a65-8d4e-9fd03f7014ba",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/test-login.js",
+      "file": "cypress/integration/QA-FE/test-login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+          "title": "Login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Don't type data",
+              "fullTitle": "Login test Don't type data",
+              "timedOut": null,
+              "duration": 3105,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.CCz-NV').should('be.disabled');",
+              "err": {},
+              "uuid": "4e6d2a16-eece-47dd-a650-f63eaa179f1e",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Type email and don't type password",
+              "fullTitle": "Login test Type email and don't type password",
+              "timedOut": null,
+              "duration": 1361,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('._1HkukX > .FcG1bN > ._56AraZ').type('{selectall}').type('{del}').type(email);\ncy.get('.CCz-NV').should('be.disabled');",
+              "err": {},
+              "uuid": "67c93d19-8131-4b14-b101-041d4a684b4c",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Account entry does not exist",
+              "fullTitle": "Login test Account entry does not exist",
+              "timedOut": null,
+              "duration": 2144,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.typeData(emailFail, password);\ncy.get('.uud8ko').should('be.visible');\ncy.get('.uud8ko').contains('Đăng nhập KHÔNG thành công. Bạn vui lòng thử lại hoặc đăng nhập bằng cách khác nhé!');",
+              "err": {},
+              "uuid": "bfb3af39-9bb8-41d1-9670-9d00b12654b5",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login success",
+              "fullTitle": "Login test Login success",
+              "timedOut": null,
+              "duration": 32726,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.typeData(email, password);\ncy.get('.CCz-NV').click();\ncy.wait(30000);\ncy.get('._25c6dS').click();\ncy.url().should('eq', 'https://shopee.vn/');\ncy.get('.shopee-popup__close-btn').click();\ncy.get('.navbar__username').contains('levanthao_2104');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://shopee.vn/__cypress/runner/cypress_runner.js:150743:17)\n    at Context.click (https://shopee.vn/__cypress/runner/cypress_runner.js:150887:14)\n    at Context.<anonymous> (https://shopee.vn/__cypress/runner/cypress_runner.js:167622:21)\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/integration/QA-FE/test-login.js:27:24)",
+                "diff": null
+              },
+              "uuid": "71effc69-234c-4aaa-8c62-58abbcf98221",
+              "parentUUID": "621db448-c59c-4cc3-a33e-63bffc02b4d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e6d2a16-eece-47dd-a650-f63eaa179f1e",
+            "67c93d19-8131-4b14-b101-041d4a684b4c",
+            "bfb3af39-9bb8-41d1-9670-9d00b12654b5"
+          ],
+          "failures": [
+            "71effc69-234c-4aaa-8c62-58abbcf98221"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39336,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7acddd57-19d8-4ceb-a31c-58c5ecb2137b",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/test-search.js",
+      "file": "cypress/integration/QA-FE/test-search.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8b833fc-1d58-4d8d-bd8f-2050b661775a",
+          "title": "Search Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search for inappropriate products",
+              "fullTitle": "Search Test Search for inappropriate products",
+              "timedOut": null,
+              "duration": 10390,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.shopee-searchbar-input__input').type(searchFail);\ncy.get('.btn').click();\ncy.wait(3000);\ncy.url().should('eq', \"https://shopee.vn/search?keyword=\".concat(searchFail));\ncy.wait(3000);\ncy.get('.shopee-search-empty-result-section').should('be.visible');",
+              "err": {},
+              "uuid": "3420b34d-c764-4361-9ae1-cf5e002361d6",
+              "parentUUID": "c8b833fc-1d58-4d8d-bd8f-2050b661775a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search tivi samsung",
+              "fullTitle": "Search Test Search tivi samsung",
+              "timedOut": null,
+              "duration": 14472,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.shopee-searchbar-input__input').type('{selectall}').type('{del}').type(search);\ncy.get('.btn').click();\ncy.wait(3000);\ncy.url().should('eq', \"https://shopee.vn/search?keyword=\".concat(search));\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get('.shopee-search-result-header__text').contains('Kết quả tìm kiếm cho từ khoá \\'samsung thiết bị điện tử tivi\\'');\ncy.get('.row > .shopee-search-item-result__item').its('length').should('be.gt', 0);\ncy.get('.row > :nth-child(1)').contains('Samsung');",
+              "err": {},
+              "uuid": "4cab796e-1501-43c4-9f11-213f91e2f2d8",
+              "parentUUID": "c8b833fc-1d58-4d8d-bd8f-2050b661775a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3420b34d-c764-4361-9ae1-cf5e002361d6",
+            "4cab796e-1501-43c4-9f11-213f91e2f2d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24862,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
