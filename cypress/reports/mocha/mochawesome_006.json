@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-24T04:13:36.210Z",
+    "end": "2020-07-24T04:13:46.747Z",
+    "duration": 10537,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ed18bac-47f9-47e9-867a-e6be73543b30",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/test-reponsive.js",
+      "file": "cypress/integration/QA-FE/test-reponsive.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ce3f4743-2700-4fdb-98cd-e7d487dba974",
+          "title": "Reponsive Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "has a visible star logo",
+              "fullTitle": "Reponsive Test has a visible star logo",
+              "timedOut": null,
+              "duration": 2550,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.icon-logo-star').should('be.visible');",
+              "err": {},
+              "uuid": "8d184698-2a4f-45f5-b24a-f8d9f4527dd4",
+              "parentUUID": "ce3f4743-2700-4fdb-98cd-e7d487dba974",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "contains \"CSS-Tricks\" in the title",
+              "fullTitle": "Reponsive Test contains \"CSS-Tricks\" in the title",
+              "timedOut": null,
+              "duration": 921,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('contain', 'CSS-Tricks');",
+              "err": {},
+              "uuid": "373f2c80-c4e5-4edb-b220-78da12518a7b",
+              "parentUUID": "ce3f4743-2700-4fdb-98cd-e7d487dba974",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "with a screen of desktop viewport",
+              "fullTitle": "Reponsive Test with a screen of desktop viewport",
+              "timedOut": null,
+              "duration": 1842,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1366, 1080);\ncy.get('#search-input').should('be.visible');",
+              "err": {},
+              "uuid": "e177a2df-ed9f-4924-a2d4-958672599552",
+              "parentUUID": "ce3f4743-2700-4fdb-98cd-e7d487dba974",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "with a screen of ipad pro viewport",
+              "fullTitle": "Reponsive Test with a screen of ipad pro viewport",
+              "timedOut": null,
+              "duration": 1215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1024, 1366);\ncy.get('#search-input').should('be.hidden');",
+              "err": {},
+              "uuid": "2f2a3505-e222-44f8-b780-c2b7c4ab50f0",
+              "parentUUID": "ce3f4743-2700-4fdb-98cd-e7d487dba974",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "with a screen of iphone 6/7/8 plus viewport",
+              "fullTitle": "Reponsive Test with a screen of iphone 6/7/8 plus viewport",
+              "timedOut": null,
+              "duration": 976,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(414, 736);\ncy.get('.icon-burger').should('be.visible');",
+              "err": {},
+              "uuid": "89a84977-edbe-41ea-9958-89e976920931",
+              "parentUUID": "ce3f4743-2700-4fdb-98cd-e7d487dba974",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d184698-2a4f-45f5-b24a-f8d9f4527dd4",
+            "373f2c80-c4e5-4edb-b220-78da12518a7b",
+            "e177a2df-ed9f-4924-a2d4-958672599552",
+            "2f2a3505-e222-44f8-b780-c2b7c4ab50f0",
+            "89a84977-edbe-41ea-9958-89e976920931"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7504,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
