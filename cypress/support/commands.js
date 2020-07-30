@@ -20,6 +20,13 @@ Cypress.Commands.add('typeData', () => {
     cy.get('.CCz-NV').click()
 })
 
+Cypress.Commands.add('resetTypeData', () => {
+    cy.get('#user_mail').type('{selectall}').type('{del}')
+    cy.get('#fullname').type('{selectall}').type('{del}')
+    cy.get('#user_pass').type('{selectall}').type('{del}')
+    cy.get('#user_confirmpass').type('{selectall}').type('{del}')
+})
+
 Cypress.Commands.add('loginSuccess', () => {
     cy.visit("/", { timeout: 30000 })
     cy.get('.home-page').should("be.visible")
@@ -33,4 +40,27 @@ Cypress.Commands.add('loginSuccess', () => {
     cy.url().should('eq', 'https://shopee.vn/')
     // cy.get('.shopee-popup__close-btn').click()
     cy.get('.navbar__username').contains('levanthao_2104')
+})
+
+Cypress.Commands.add('loginYourLap', () => {
+    cy.visit("/loginUser.html")
+    cy.wait(3000)
+    cy.fixture("yourlap").then(user => {
+        cy.get('#email').type(user.email)
+        cy.get('#password').type(user.password)
+    })
+    cy.get('.btn--primary').click()
+    cy.wait(3000)
+    cy.get('.header__navbar-user-name').contains('Admin')
+})
+
+Cypress.Commands.add('loginYL', () => {
+    cy.wait(3000)
+    cy.fixture("yourlap").then(user => {
+        cy.get('#email').type(user.email2)
+        cy.get('#password').type(user.password2)
+    })
+    cy.get('.btn--primary').click()
+    cy.wait(3000)
+    cy.get('.header__navbar-user-name').contains('Le Van Thao')
 })

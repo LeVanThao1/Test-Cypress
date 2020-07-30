@@ -1,80 +1,23 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-24T04:10:42.457Z",
-    "end": "2020-07-24T04:11:00.381Z",
-    "duration": 17924,
-    "testsRegistered": 1,
-    "passPercent": 100,
-    "pendingPercent": 0,
+    "start": "2020-07-24T09:01:23.312Z",
+    "end": "2020-07-24T09:01:23.318Z",
+    "duration": 6,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "8304434e-568b-420c-8b8e-0bb49d316733",
-      "title": "",
-      "fullFile": "cypress/integration/QA-FE/tamp.js",
-      "file": "cypress/integration/QA-FE/tamp.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "f7669ce6-3df6-4ef2-8112-5424b2afc2e9",
-          "title": "Cart Test",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Check the cart when have not login",
-              "fullTitle": "Cart Test Check the cart when have not login",
-              "timedOut": null,
-              "duration": 6539,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://your-lap.herokuapp.com\", {\n  timeout: 30000\n});\ncy.screenshot();",
-              "err": {},
-              "uuid": "97e2ad55-756f-4ef8-a279-a68704627c48",
-              "parentUUID": "f7669ce6-3df6-4ef2-8112-5424b2afc2e9",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "97e2ad55-756f-4ef8-a279-a68704627c48"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 6539,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
+    false
   ],
   "meta": {
     "mocha": {

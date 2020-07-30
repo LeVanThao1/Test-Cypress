@@ -1,149 +1,70 @@
 {
   "stats": {
-    "suites": 2,
+    "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-07-24T04:11:11.174Z",
-    "end": "2020-07-24T04:12:05.648Z",
-    "duration": 54474,
-    "testsRegistered": 4,
-    "passPercent": 25,
+    "failures": 1,
+    "start": "2020-07-24T09:01:26.085Z",
+    "end": "2020-07-24T09:02:07.514Z",
+    "duration": 41429,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
-    "other": 1,
-    "hasOther": true,
-    "skipped": 3,
-    "hasSkipped": true
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "abb7a2f2-1424-43ee-bc0d-3999c4fee2a5",
+      "uuid": "4a5d5109-4db2-44d7-b0db-a9823daf61e2",
       "title": "",
-      "fullFile": "cypress/integration/QA-FE/test-cart.js",
-      "file": "cypress/integration/QA-FE/test-cart.js",
+      "fullFile": "cypress/integration/ObjectModelLogin/test-POMLogin.spec.js",
+      "file": "cypress/integration/ObjectModelLogin/test-POMLogin.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "0d3610a0-fbc0-433e-ad2b-f09dc70bc723",
-          "title": "Cart Test",
+          "uuid": "2368e282-f434-4dc1-b2ca-939af9d88884",
+          "title": "Login",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Check the cart when have not login",
-              "fullTitle": "Cart Test Check the cart when have not login",
+              "title": "Sign in",
+              "fullTitle": "Login Sign in",
               "timedOut": null,
-              "duration": 8113,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 41317,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit(\"/\", {\n  timeout: 30000\n});\ncy.get('.home-page').should(\"be.visible\");\ncy.get('.shopee-popup__close-btn').click();\ncy.get('.cart-drawer-container').click();\ncy.wait(3000);\ncy.url().should('includes', '/login');",
-              "err": {},
-              "uuid": "046086dd-ac53-4346-bcab-5b236473019b",
-              "parentUUID": "0d3610a0-fbc0-433e-ad2b-f09dc70bc723",
+              "code": "cy.visit('/buyer/login?next=https%253A%252F%252Fshopee.vn%252F');\ncy.fixture('variable').then(function (user) {\n  login.email().type(user.email);\n  login.password().type(user.password);\n});\nlogin.signInButton().should('be.visible').click();\ncy.wait(30000);\ncy.get('._25c6dS').click();\ncy.url().should('eq', 'https://shopee.vn/');\ncy.get('.navbar__username').contains('levanthao_2104');",
+              "err": {
+                "message": "CypressError: Timed out retrying: `cy.click()` failed because this element is `disabled`:\n\n`<button class=\"_25c6dS _2revuH CCz-NV _3LF8FC _1wmlc0 _1YKfmR E73q_w\" disabled=\"\">Xác nhận</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying: `cy.click()` failed because this element is `disabled`:\n\n`<button class=\"_25c6dS _2revuH CCz-NV _3LF8FC _1wmlc0 _1YKfmR E73q_w\" disabled=\"\">Xác nhận</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureNotDisabled (https://shopee.vn/__cypress/runner/cypress_runner.js:159656:24)\n    at runAllChecks (https://shopee.vn/__cypress/runner/cypress_runner.js:148809:14)\n    at retryActionability (https://shopee.vn/__cypress/runner/cypress_runner.js:148865:16)\n    at tryCatcher (https://shopee.vn/__cypress/runner/cypress_runner.js:10130:23)\n    at Function.Promise.attempt.Promise.try (https://shopee.vn/__cypress/runner/cypress_runner.js:7404:29)\n    at tryFn (https://shopee.vn/__cypress/runner/cypress_runner.js:162938:24)\n    at whenStable (https://shopee.vn/__cypress/runner/cypress_runner.js:162979:12)\n    at https://shopee.vn/__cypress/runner/cypress_runner.js:162502:16\n    at tryCatcher (https://shopee.vn/__cypress/runner/cypress_runner.js:10130:23)\n    at Promise._settlePromiseFromHandler (https://shopee.vn/__cypress/runner/cypress_runner.js:8065:31)\n    at Promise._settlePromise (https://shopee.vn/__cypress/runner/cypress_runner.js:8122:18)\n    at Promise._settlePromise0 (https://shopee.vn/__cypress/runner/cypress_runner.js:8167:10)\n    at Promise._settlePromises (https://shopee.vn/__cypress/runner/cypress_runner.js:8247:18)\n    at Promise._fulfill (https://shopee.vn/__cypress/runner/cypress_runner.js:8191:18)\n    at https://shopee.vn/__cypress/runner/cypress_runner.js:9805:46\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/integration/ObjectModelLogin/test-POMLogin.spec.js:94:24)",
+                "diff": null
+              },
+              "uuid": "2ded640d-2a9e-4224-80ba-d7c1210edcb6",
+              "parentUUID": "2368e282-f434-4dc1-b2ca-939af9d88884",
               "isHook": false,
               "skipped": false
             }
           ],
-          "suites": [
-            {
-              "uuid": "8cbeb2ed-09ae-46cd-847a-f6f86cdefdea",
-              "title": "Check Cart When Login",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "Check the cart when you have not added the product",
-                  "fullTitle": "Cart Test Check Cart When Login Check the cart when you have not added the product",
-                  "timedOut": null,
-                  "duration": 45987,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
-                  "pending": false,
-                  "context": null,
-                  "code": "// cy.get('.shopee-cart-number-badge').should('be.hidden')\ncy.get('.cart-drawer-container').click();\ncy.wait(3000);\ncy.url().should('includes', '/shopping_cart');\ncy.get('.UM4yVY').contains('Giỏ hàng của bạn còn trống');",
-                  "err": {
-                    "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Check Cart When Login`",
-                    "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 4 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Check Cart When Login`\n    at mouseAction (https://shopee.vn/__cypress/runner/cypress_runner.js:150888:17)\n    at Context.click (https://shopee.vn/__cypress/runner/cypress_runner.js:151032:14)\n    at Context.<anonymous> (https://shopee.vn/__cypress/runner/cypress_runner.js:167810:21)\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/support/index.js:528:22)",
-                    "diff": null
-                  },
-                  "uuid": "b9f20052-ea43-47bf-9db3-7b8c8c670907",
-                  "parentUUID": "8cbeb2ed-09ae-46cd-847a-f6f86cdefdea",
-                  "isHook": false,
-                  "skipped": false
-                },
-                {
-                  "title": "Check add product to cart",
-                  "fullTitle": "Cart Test Check Cart When Login Check add product to cart",
-                  "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.get('.shopee-searchbar-input__input').type('{selectall}').type('{del}').type(search);\ncy.get('.shopee-searchbar > .btn').click();\ncy.wait(3000);\ncy.url().should('eq', \"https://shopee.vn/search?keyword=\".concat(search));\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get('.shopee-search-result-header__text').contains('Kết quả tìm kiếm cho từ khoá \\'samsung thiết bị điện tử tivi\\'');\ncy.get(':nth-child(1) > :nth-child(1) > a > ._1gkBDw').click();\ncy.wait(3000);\ncy.get('._19lAw4 > :nth-child(3)').click();\ncy.get('._18Y8Ul').should('have.value', 2);\ncy.get('._19lAw4 > :nth-child(1)').click();\ncy.get('._18Y8Ul').should('have.value', 1);\ncy.get('._2O0llP > .btn-tinted').click();\ncy.wait(500);\ncy.get('.toast__icon', {\n  timeout: 1000\n}).should('be.visible');\ncy.get('.toast__container').contains('Sản phẩm đã được thêm vào Giỏ hàng');\ncy.wait(3000);\ncy.get('.shopee-cart-number-badge').then(function ($count) {\n  count = parseInt($count.text());\n  cy.get('.cart-drawer-container').click();\n  cy.wait(3000);\n  cy.url().should('includes', '/shopping_cart');\n  cy.get('.cart-page-shop-section').its('length').should('eq', count);\n});",
-                  "err": {},
-                  "uuid": "0ee8bdd2-5930-4fc2-b922-1bdc18822dcd",
-                  "parentUUID": "8cbeb2ed-09ae-46cd-847a-f6f86cdefdea",
-                  "isHook": false,
-                  "skipped": true
-                },
-                {
-                  "title": "Delete product in cart",
-                  "fullTitle": "Cart Test Check Cart When Login Delete product in cart",
-                  "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.get('.cart-drawer-container').click();\ncy.wait(3000);\ncy.url().should('includes', '/shopping_cart');\ncy.get(':nth-child(1) > .cart-page-shop-section__items > .cart-item > .cart-item__content > .cart-item__cell-actions').click();\ncy.wait(2000);\ncy.get('.shopee-alert-popup').should('be.visible');\ncy.get('.shopee-alert-popup__button-horizontal-layout > .btn-solid-primary').click();\ncy.wait(2000);\ncy.get('.UM4yVY').contains('Giỏ hàng của bạn còn trống');",
-                  "err": {},
-                  "uuid": "bd6e12d4-a84a-4cd0-9643-afcb7e005bf6",
-                  "parentUUID": "8cbeb2ed-09ae-46cd-847a-f6f86cdefdea",
-                  "isHook": false,
-                  "skipped": true
-                }
-              ],
-              "suites": [],
-              "passes": [],
-              "failures": [
-                "b9f20052-ea43-47bf-9db3-7b8c8c670907"
-              ],
-              "pending": [],
-              "skipped": [
-                "0ee8bdd2-5930-4fc2-b922-1bdc18822dcd",
-                "bd6e12d4-a84a-4cd0-9643-afcb7e005bf6"
-              ],
-              "duration": 45987,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
-            }
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2ded640d-2a9e-4224-80ba-d7c1210edcb6"
           ],
-          "passes": [
-            "046086dd-ac53-4346-bcab-5b236473019b"
-          ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8113,
+          "duration": 41317,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

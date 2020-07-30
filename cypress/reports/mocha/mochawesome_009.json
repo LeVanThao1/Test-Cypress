@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-24T09:05:03.996Z",
+    "end": "2020-07-24T09:05:31.053Z",
+    "duration": 27057,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e96c8fb3-dc6b-4bea-8dd8-6ee68b730edc",
+      "title": "",
+      "fullFile": "cypress/integration/QA-FE/test-search.spec.js",
+      "file": "cypress/integration/QA-FE/test-search.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1df4e1f-bd4c-45bf-b79d-5f432174edac",
+          "title": "Search Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search for inappropriate products",
+              "fullTitle": "Search Test Search for inappropriate products",
+              "timedOut": null,
+              "duration": 12511,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.shopee-searchbar-input__input').type(searchFail);\ncy.get('.btn').click();\ncy.wait(3000);\ncy.url().should('eq', \"https://shopee.vn/search?keyword=\".concat(searchFail));\ncy.wait(3000);\ncy.get('.shopee-search-empty-result-section').should('be.visible');",
+              "err": {},
+              "uuid": "82bd9d4e-cc58-4add-b91b-784d4dd0e055",
+              "parentUUID": "e1df4e1f-bd4c-45bf-b79d-5f432174edac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search tivi samsung",
+              "fullTitle": "Search Test Search tivi samsung",
+              "timedOut": null,
+              "duration": 14386,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.shopee-searchbar-input__input').type('{selectall}').type('{del}').type(search);\ncy.get('.btn').click();\ncy.wait(3000);\ncy.url().should('eq', \"https://shopee.vn/search?keyword=\".concat(search));\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get(':nth-child(5) > .shopee-recommend-search-word > .shopee-recommend-search-word__mask').click();\ncy.wait(3000);\ncy.get('.shopee-search-result-header__text').contains('Kết quả tìm kiếm cho từ khoá \\'samsung thiết bị điện tử tivi\\'');\ncy.get('.row > .shopee-search-item-result__item').its('length').should('be.gt', 0);\ncy.get('.row > :nth-child(1)').contains('Samsung');",
+              "err": {},
+              "uuid": "57af6f92-c077-4862-841a-add98d454593",
+              "parentUUID": "e1df4e1f-bd4c-45bf-b79d-5f432174edac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82bd9d4e-cc58-4add-b91b-784d4dd0e055",
+            "57af6f92-c077-4862-841a-add98d454593"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26897,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

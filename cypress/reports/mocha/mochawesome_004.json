@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2020-07-24T04:12:24.916Z",
-    "end": "2020-07-24T04:12:26.504Z",
-    "duration": 1588,
+    "start": "2020-07-24T09:02:16.231Z",
+    "end": "2020-07-24T09:02:47.113Z",
+    "duration": 30882,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "94ddf0e1-cc04-45a8-ad25-c8ca5235e073",
+      "uuid": "7359f0ed-fca4-4d38-8622-b59ed5b5be22",
       "title": "",
-      "fullFile": "cypress/integration/QA-FE/test-css.js",
-      "file": "cypress/integration/QA-FE/test-css.js",
+      "fullFile": "cypress/integration/QA-FE/tamp.spec.js",
+      "file": "cypress/integration/QA-FE/tamp.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "36490761-85a0-4041-8d51-ee696e0ada8b",
-          "title": "CSS Test",
+          "uuid": "6972f0fe-1800-4d1d-a451-74c2ef848cad",
+          "title": "Cart Test",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "changes background color",
-              "fullTitle": "CSS Test changes background color",
+              "title": "Check the cart when have not login",
+              "fullTitle": "Cart Test Check the cart when have not login",
               "timedOut": null,
-              "duration": 1507,
+              "duration": 30784,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit('http://127.0.0.1:5500/test.html');\ncy.get('body').should('have.css', 'background-color', 'rgb(0, 0, 0)'); // select the new color value in the <input type=\"color\">\n// element and trigger \"change\" event\ncy.get('input[type=color]').invoke('val', '#ff0000').trigger('change'); // check the background color has been changed\ncy.get('body').should('have.css', 'background-color', 'rgb(255, 0, 0)');",
+              "code": "cy.visit(\"https://your-lap.herokuapp.com\", {\n  timeout: 30000\n});\ncy.screenshot();",
               "err": {
-                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://127.0.0.1:5500/test.html\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:5500\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://127.0.0.1:5500/test.html\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:5500\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at https://shopee.vn/__cypress/runner/cypress_runner.js:156598:23\n    at visitFailedByErr (https://shopee.vn/__cypress/runner/cypress_runner.js:155959:12)\n    at https://shopee.vn/__cypress/runner/cypress_runner.js:156597:11\n    at tryCatcher (https://shopee.vn/__cypress/runner/cypress_runner.js:9956:23)\n    at Promise._settlePromiseFromHandler (https://shopee.vn/__cypress/runner/cypress_runner.js:7891:31)\n    at Promise._settlePromise (https://shopee.vn/__cypress/runner/cypress_runner.js:7948:18)\n    at Promise._settlePromise0 (https://shopee.vn/__cypress/runner/cypress_runner.js:7993:10)\n    at Promise._settlePromises (https://shopee.vn/__cypress/runner/cypress_runner.js:8069:18)\n    at _drainQueueStep (https://shopee.vn/__cypress/runner/cypress_runner.js:4663:12)\n    at _drainQueue (https://shopee.vn/__cypress/runner/cypress_runner.js:4656:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://shopee.vn/__cypress/runner/cypress_runner.js:4672:5)\n    at Async.drainQueues (https://shopee.vn/__cypress/runner/cypress_runner.js:4542:14)\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/integration/QA-FE/test-css.js:6:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:5500\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1128:14)\n  ",
+                "message": "CypressError: Timed out after waiting `30000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `30000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `30000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `30000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://shopee.vn/__cypress/runner/cypress_runner.js:155493:13)\n    at https://shopee.vn/__cypress/runner/cypress_runner.js:156469:16\n    at tryCatcher (https://shopee.vn/__cypress/runner/cypress_runner.js:10130:23)\n    at https://shopee.vn/__cypress/runner/cypress_runner.js:5252:41\n    at tryCatcher (https://shopee.vn/__cypress/runner/cypress_runner.js:10130:23)\n    at Promise._settlePromiseFromHandler (https://shopee.vn/__cypress/runner/cypress_runner.js:8065:31)\n    at Promise._settlePromise (https://shopee.vn/__cypress/runner/cypress_runner.js:8122:18)\n    at Promise._settlePromise0 (https://shopee.vn/__cypress/runner/cypress_runner.js:8167:10)\n    at Promise._settlePromises (https://shopee.vn/__cypress/runner/cypress_runner.js:8243:18)\n    at _drainQueueStep (https://shopee.vn/__cypress/runner/cypress_runner.js:4837:12)\n    at _drainQueue (https://shopee.vn/__cypress/runner/cypress_runner.js:4830:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://shopee.vn/__cypress/runner/cypress_runner.js:4846:5)\n    at Async.drainQueues (https://shopee.vn/__cypress/runner/cypress_runner.js:4716:14)\nFrom Your Spec Code:\n    at Context.eval (https://shopee.vn/__cypress/tests?p=cypress/integration/QA-FE/tamp.spec.js:6:8)",
                 "diff": null
               },
-              "uuid": "1354cbbd-a429-4528-89a2-221258d1e067",
-              "parentUUID": "36490761-85a0-4041-8d51-ee696e0ada8b",
+              "uuid": "fc90c66d-fe85-42d8-b2f1-471a65210432",
+              "parentUUID": "6972f0fe-1800-4d1d-a451-74c2ef848cad",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "1354cbbd-a429-4528-89a2-221258d1e067"
+            "fc90c66d-fe85-42d8-b2f1-471a65210432"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 1507,
+          "duration": 30784,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

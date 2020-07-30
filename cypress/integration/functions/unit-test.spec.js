@@ -20,6 +20,9 @@ describe('Unit Test Application Code', function () {
         it('can divide numbers', function () {
             expect(divide(27, 9)).to.eq(3)
         })
+        it('can divide numbers', function () {
+            expect(divide(27, 0)).to.eq(Infinity)
+        })
 
         it('can muliple numbers', function () {
             expect(multiply(5, 4)).to.eq(20)

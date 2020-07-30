@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://shopee.vn",
+    "baseUrl": "https://your-lap.herokuapp.com",
     "viewportWidth": 1366,
     "viewportHeight": 1080,
     "reporter": "cypress-multi-reporters",
