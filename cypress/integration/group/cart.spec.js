@@ -130,6 +130,15 @@ describe('Register Test', () => {
             cy.loginYourLap();
         })
         it('Check the cart when you haven\'t the product', () => {
+            cy.get('.header__cart-wrap').click()
+            cy.wait(3000)
+            cy.url().should('includes', '/cart.html')
+            cy.get('.header__logo-img').click()
+            cy.wait(3000)
+            cy.url().should('eq', 'https://your-lap.herokuapp.com/')
+        });
+
+        it('Check the cart when you haven\'t the product', () => {
             cy.get('.header__cart-wrap').trigger('mouseover')
             cy.get('.header__cart-list-no-cart-msg').contains('Chưa có sản phẩm')
             cy.get('.header__cart-wrap').click()
@@ -161,6 +170,13 @@ describe('Register Test', () => {
             })
         });
 
+        it('Click product in cart', () => {
+            cy.get('.header__cart-wrap').click()
+            cy.wait(3000)
+            cy.url().should('includes', '/cart.html')
+            cy.get('a[href="https://your-lap.herokuapp.com/chitiet.html?id=5ef4240054e5e23a591f407f"]').click()
+            cy.url().should('include', '/chitiet.html?id=5ef4240054e5e23a591f407f')
+        })
         it('Check add the same product 2 times to cart', () => {
             cy.get('.header__cart-notice').then($el => {
                 cy.log($el.text())
@@ -194,7 +210,7 @@ describe('Register Test', () => {
             cy.get('.cart-total-prices__cur-number').contains('0đ')
             cy.get('.cart_content-child').should('have.length', 0)
         })
-        it.only('Add 2 different products', () => {
+        it('Add 2 different products', () => {
             cy.wait(3000)
             cy.get('.header__cart-notice').then($el => {
                 cy.log($el.text())

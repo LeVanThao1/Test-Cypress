@@ -8,7 +8,11 @@ describe('Register test', () => {
         cy.wait(3000)
         cy.resetTypeData()
     })
-
+    it('Click into Đăng nhập',() => {
+        cy.get('#pass-to-login').click()
+        cy.wait(3000)
+        cy.url().should('include', '/loginUser.html')
+    })
     it('Don\'t type data', () => {
         cy.get('.btn--primary').click()
         // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
@@ -28,6 +32,33 @@ describe('Register test', () => {
         cy.get('.btn--primary').click()
         // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
         cy.get(':nth-child(1) > small').contains('Email không được để trống')
+    });
+    it('Don\'t type field fullname data', () => {
+        cy.get('#user_mail').type('thaolv210402@gmail.com')
+        // cy.get('#fullname').type('Le Van Thao')
+        cy.get('#user_pass').type('Ta210402')
+        cy.get('#user_confirmpass').type('Ta210402')
+        cy.get('.btn--primary').click()
+        // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
+        cy.get(':nth-child(2) > small').contains('Fullname không được để trống')
+    });
+    it('Don\'t type field password', () => {
+        cy.get('#user_mail').type('thaolv210402@gmail.com')
+        cy.get('#fullname').type('Le Van Thao')
+        // cy.get('#user_pass').type('Ta210402')
+        cy.get('#user_confirmpass').type('Ta210402')
+        cy.get('.btn--primary').click()
+        // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
+        cy.get(':nth-child(3) > small').contains('Mật khẩu không được để trống')
+    });
+    it('Don\'t type field confirmPassword', () => {
+        cy.get('#user_mail').type('thaolv210402@gmail.com')
+        cy.get('#fullname').type('Le Van Thao')
+        cy.get('#user_pass').type('Ta210402')
+        // cy.get('#user_confirmpass').type('Ta210402')
+        cy.get('.btn--primary').click()
+        // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
+        cy.get(':nth-child(4) > small').contains('Bạn phải nhập để xác nhận mật khẩu mới')
     });
     it('Type field email fail', () => {
         cy.get('#user_mail').type('thaolv210402gmail.co')
@@ -64,6 +95,24 @@ describe('Register test', () => {
         cy.get('.btn--primary').click()
         // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
         cy.get(':nth-child(4) > small').contains('Mật khẩu mới không trùng khớp')
+    });
+    it('Type field fullname that exceeds 30 characters', () => {
+        cy.get('#user_mail').type('abcabcabc@gmail.com')
+        cy.get('#fullname').type('levanthaolevanthaolevanthaolevanthao')
+        cy.get('#user_pass').type('Ta210402')
+        cy.get('#user_confirmpass').type('Ta210402')
+        cy.get('.btn--primary').click()
+        // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
+        cy.get(':nth-child(2) > small').contains('Fullname không được vượt quá 30 kí tự')
+    });
+    it('Password does not contain special characters', () => {
+        cy.get('#user_mail').type('abcabcabc@gmail.com')
+        cy.get('#fullname').type('levanthao')
+        cy.get('#user_pass').type('@Ta210402')
+        cy.get('#user_confirmpass').type('@Ta210402')
+        cy.get('.btn--primary').click()
+        // cy.get('.auth-form__group.error:nth-child(1) input').should('have.css', 'border-color: rgb(231, 76, 60)')
+        cy.get(':nth-child(3) > small').contains('Mật khẩu không được chưa ký tự đặc biệt')
     });
     it('Register success', () => {
         cy.get('#user_mail').type('thaolv210402@gmail.com')
